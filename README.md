@@ -11,7 +11,10 @@ O sistema desenvolvido simplifica significativamente esse processo ao automatiza
 ![Imagem](./public/diagramaer.png)
 
 # Modelagem das Tabelas
-  
+  <details>
+	  <summary> Expandir</summary>
+
+   
   ## Livros
 
   ```
@@ -35,6 +38,7 @@ O sistema desenvolvido simplifica significativamente esse processo ao automatiza
 	    CONSTRAINT fk_livro FOREIGN KEY (livro_id) REFERENCES livro (id),
 	);
 ```
+</details>
 
 # Diagrama de Atividades
 
