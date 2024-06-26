@@ -96,7 +96,7 @@ GET /api/v1/livros
 
 <hr>
 
-- Buscar informações de um livro específico
+- Buscar informações de um livro específico (contendo todas suas transações)
 ```
 GET /api/v1/livros/:id
 ```
