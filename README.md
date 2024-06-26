@@ -10,6 +10,32 @@ O sistema desenvolvido simplifica significativamente esse processo ao automatiza
 
 ![Imagem](./public/diagramaer.png)
 
+# Modelagem das Tabelas
+  
+  ## Livros
+
+  ```
+	CREATE TABLE livro (
+	    id SERIAL PRIMARY KEY,
+	    titulo VARCHAR(255) NOT NULL,
+	    preco NUMERIC(10, 2) NOT NULL,
+	    quantidade INTEGER NOT NULL
+	);		
+ ```
+
+  ### Transações
+
+  ```
+	CREATE TABLE transacao (
+	    id SERIAL PRIMARY KEY,
+	    tipo VARCHAR(50) NOT NULL,
+	    data TIMESTAMP NOT NULL,
+	    livro_id INTEGER NOT NULL,
+	    valor NUMERIC(10, 2) NOT NULL,
+	    CONSTRAINT fk_livro FOREIGN KEY (livro_id) REFERENCES livro (id),
+	);
+```
+
 # Diagrama de Atividades
 
 ![Imagem](./public/diagramaativ.png)
