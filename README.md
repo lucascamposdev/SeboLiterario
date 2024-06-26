@@ -6,25 +6,13 @@ Este projeto foi desenvolvido como parte de um trabalho de extensão universitá
 O alvo deste projeto foi um sebo literário que utilizava-se de métodos manuais para seu gerenciamento, o que limitava sua eficiência operacional. 
 O sistema desenvolvido simplifica significativamente esse processo ao automatizar tarefas e fornecer acesso simplificado às informações essenciais.
 
-# Funcionalidades
+# Diagrama Entidade Relacionamento
 
-#Usuarios
-- Cadastro de conta Usuário
-- Atualização dos dados de um Usuário
-- Deleção de Conta
-  
-#Lojas
-- Cadastro de conta Loja
-- Busca por dados de uma Loja
-- Busca por nome de Lojas
-- Busca por Lojas que entregam em determinada localidade
-- Atualização dos dados de uma Loja
-- Deleção de Conta
+![Imagem](./public/diagramaer.png)
 
-#Produtos
-- Cadastro de Produtos
-- Atualização dos dados de um Produto
-- Deleção de um Produto
+# Diagrama de Atividades
+
+![Imagem](./public/diagramaativ.png)
 
 # Tecnologias utilizadas
 - Java 17
@@ -32,21 +20,6 @@ O sistema desenvolvido simplifica significativamente esse processo ao automatiza
 - JPA / Hibernate
 - Maven
 - PostgreSQL
-
-A API poderá ser acessada em http://localhost:8080
-
-# Como executar o projeto
-
-```bash
-# clonar repositório
-git clone https://github.com/lucascamposdev/FoodDeliveryAPI.git
-
-# executar o projeto (Docker)
-docker compose up --build
-
-# executar os testes
-mvn test
-```
 
 ## API Endpoints
 
