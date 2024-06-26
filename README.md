@@ -46,7 +46,7 @@ O sistema desenvolvido simplifica significativamente esse processo ao automatiza
 
 # Tecnologias utilizadas
 - Java 17
-- Spring Boot 3.2.5
+- Spring Boot 3.3.1
 - JPA / Hibernate
 - Maven
 - PostgreSQL
