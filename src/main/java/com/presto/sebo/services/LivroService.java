@@ -53,14 +53,15 @@ public class LivroService {
 
         if(livroEncontrado.isPresent()){
             livroAlterado = livroEncontrado.get();
-            livroAlterado.setQuantidade(livroAlterado.getQuantidade() + 1);
+            livroAlterado.setQuantidade(livroAlterado.getQuantidade() + livro.getQuantidade());
             livroAlterado = livroRepository.save(livroAlterado);
         }else{
             livroAlterado = livroRepository.save(livro);
         }
 
         if(!isTrade){
-            registrarTransacao(livroAlterado, TipoTransacao.COMPRA, livroAlterado.getPreco());
+            BigDecimal valor = livroAlterado.getPreco().multiply(BigDecimal.valueOf(livro.getQuantidade()));
+            registrarTransacao(livroAlterado, TipoTransacao.COMPRA, valor);
         }
 
         return livroAlterado;
